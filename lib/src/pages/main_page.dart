@@ -21,7 +21,17 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Obx(
       () => Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white,
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          // backgroundColor: Color(0xFFEC6624),
+          centerTitle: true,
+          title: Image.asset(
+            'assets/logo.png',
+            height: 40,
+          ),
+        ),
+        drawer: Drawer(),
         body: Base.webViewController.progressValue.value == 1.0
             ? SafeArea(
                 child: WebViewWidget(
@@ -31,20 +41,17 @@ class _MainPageState extends State<MainPage> {
               )
             : SafeArea(
                 child: Center(
-                  child: Padding(
-                    padding: const EdgeInsets.all(15.0),
-                    child: CircularProgressIndicator(
-                      semanticsLabel:
-                          Base.webViewController.progressValue.value.toString(),
-                      semanticsValue:
-                          Base.webViewController.progressValue.value.toString(),
-                      strokeWidth: 5,
-                      value: Base.webViewController.progressValue
-                          .value, // Observe progress changes
-                      backgroundColor: Colors.grey[300],
-                      valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
-                      color: Colors.blue,
-                    ),
+                  child: CircularProgressIndicator(
+                    semanticsLabel:
+                        Base.webViewController.progressValue.value.toString(),
+                    semanticsValue:
+                        Base.webViewController.progressValue.value.toString(),
+                    strokeWidth: 5,
+                    value: Base.webViewController.progressValue.value,
+                    backgroundColor: Colors.grey[300],
+                    valueColor:
+                        AlwaysStoppedAnimation<Color>(Color(0xFFEC6624)),
+                    color: Color(0xFFEC6624),
                   ),
                 ),
               ),
