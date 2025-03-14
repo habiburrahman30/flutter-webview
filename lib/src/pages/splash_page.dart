@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_webview/src/pages/main_page.dart';
 import 'package:get/get.dart';
 
+import '../base/base.dart';
+
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
 
@@ -16,11 +18,17 @@ class _SplashPageState extends State<SplashPage> {
     _updateAppbar();
 
     super.initState();
-    // Base.notificationController.initOnesignalFunction();
-    // Base.notificationController.handlePromptForPushPermission();
+    initAppConfig();
     Future.delayed(const Duration(seconds: 2), () {
       Get.offAll(() => const MainPage());
     });
+  }
+
+  Future<void> initAppConfig() async {
+    // AppLinks is singleton
+    //Init onesignal
+    await Base.onesignalNotificationController.initOnesignal();
+    await Base.onesignalNotificationController.handlePromptForPushPermission();
   }
 
   void _updateAppbar() {

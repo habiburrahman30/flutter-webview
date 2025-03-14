@@ -22,16 +22,16 @@ class _MainPageState extends State<MainPage> {
     return Obx(
       () => Scaffold(
         backgroundColor: Colors.white,
-        appBar: AppBar(
-          backgroundColor: Colors.white,
-          // backgroundColor: Color(0xFFEC6624),
-          centerTitle: true,
-          title: Image.asset(
-            'assets/logo.png',
-            height: 40,
-          ),
-        ),
-        drawer: Drawer(),
+        // appBar: AppBar(
+        //   backgroundColor: Colors.white,
+        //   // backgroundColor: Color(0xFFEC6624),
+        //   centerTitle: true,
+        //   title: Image.asset(
+        //     'assets/logo.png',
+        //     height: 40,
+        //   ),
+        // ),
+        // drawer: Drawer(),
         body: Base.webViewController.progressValue.value == 1.0
             ? SafeArea(
                 child: WebViewWidget(
