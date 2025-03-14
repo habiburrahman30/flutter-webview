@@ -1,4 +1,4 @@
-package com.example.flutter_webview
+package com.competitii.app
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -67,49 +67,49 @@ class WebViewMobileController extends GetxController {
             //   }
             // ''');
 
-            webViewController.runJavaScript('''
-                // Hide the outer div with class "row wpslabtop wpslab6"
-                var outerDiv = document.querySelector('.row.wpslabtop.wpslab6');
-                if (outerDiv) {
-             var element = document.querySelector('.col-8.col-md-8.text-center.align-self-center.wpslabtop.wpslab8');
-                    console.log(element); // Debugging: Log the element
-                    if (element) {
-                      element.style.display = 'none';
-                    } else {
-                      console.log('Element not found'); // Debugging: Log if element is not found
-                    }
+            // webViewController.runJavaScript('''
+            //     // Hide the outer div with class "row wpslabtop wpslab6"
+            //     var outerDiv = document.querySelector('.row.wpslabtop.wpslab6');
+            //     if (outerDiv) {
+            //  var element = document.querySelector('.col-8.col-md-8.text-center.align-self-center.wpslabtop.wpslab8');
+            //         console.log(element); // Debugging: Log the element
+            //         if (element) {
+            //           element.style.display = 'none';
+            //         } else {
+            //           console.log('Element not found'); // Debugging: Log if element is not found
+            //         }
 
-                var element1 = document.querySelector('.col-md-2');
-                if (element1) {
-                element1.style.display = 'none';
-                
-                  // Remove the class "col-md-2"
-                  // element1.classList.remove('col-md-2');
+            //     var element1 = document.querySelector('.col-md-2');
+            //     if (element1) {
+            //     element1.style.display = 'none';
 
-                  // Add the class "col-md-6"
-                  // element1.classList.add('col-md-6');
-                }
+            //       // Remove the class "col-md-2"
+            //       // element1.classList.remove('col-md-2');
 
-                 var element2 = document.querySelector('.col-12');
-                   if (element2) {
-                    element2.style.display = 'none';
+            //       // Add the class "col-md-6"
+            //       // element1.classList.add('col-md-6');
+            //     }
 
-                  // Remove the class "col-md-2"
-                  // element2.classList.remove('col-12');
+            //      var element2 = document.querySelector('.col-12');
+            //        if (element2) {
+            //         element2.style.display = 'none';
 
-                  // Add the class "col-md-6"
-                  // element2.classList.add('col-6');
-                }
+            //       // Remove the class "col-md-2"
+            //       // element2.classList.remove('col-12');
 
-                //  var element3 = document.querySelector('.top-social');
-                //    if (element3) {
-                //   // Remove the class "col-md-2"
-                //   element3.classList.remove('top-social');
+            //       // Add the class "col-md-6"
+            //       // element2.classList.add('col-6');
+            //     }
 
-                //    }
-                }
+            //     //  var element3 = document.querySelector('.top-social');
+            //     //    if (element3) {
+            //     //   // Remove the class "col-md-2"
+            //     //   element3.classList.remove('top-social');
 
-              ''');
+            //     //    }
+            //     }
+
+            //   ''');
           },
           onHttpError: (HttpResponseError error) {
             klog('HTTP error: ${error.response}');
